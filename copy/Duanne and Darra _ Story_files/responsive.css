@@ -1,0 +1,277 @@
+@media only screen and (max-width: 1800px) {
+    #helper{
+      height: 400vw;
+    }
+}
+
+@media only screen and (max-width: 1730px) {
+    #helper{
+      height: 440vw;
+    }
+}
+
+
+
+@media only screen and (max-width: 1600px) {
+
+    #helper{
+      height:450vw
+    }
+
+    .floor img {width: 2180px;}
+
+    .center{ bottom: 150px }
+
+    .character {
+        width: 500px;
+        height: 610px;
+    }
+
+    @keyframes sprite {
+      100% { background-position: -2500px 0%; }
+
+    }
+
+    #char-05 img{
+        width:500px;
+        margin-bottom:150px
+    }
+
+    .bike-cont .darra-bike, .bike-cont .duanne-bike {
+        width: 30%;
+        bottom: 40px;
+    }
+
+    .darra-bike { left: 5% }
+
+    .duanne-bike { right: 5% }
+
+    .floor{ height:200px !important}
+
+    #slide-3 .bg img { width:120% }
+
+    #slide-3 .bg { bottom: 200px }
+
+    .split img{ width:1900px }
+
+    #slide-4 .bg-back {
+        width: 100px;
+        bottom: 190px;
+    }
+
+    .split img {
+        position: absolute;
+        bottom: -30px;
+    }
+
+    #slide-5 .split:first-child .bg-back { bottom: 200px }
+
+    #slide-5 .split:last-child .bg-back:last-child {
+        bottom: 250px;
+        z-index: -2;
+        width: 200px;
+    }
+
+    .center img { width: 500px }
+
+    #slide-6 .arch img{
+        width: 700px;
+        left: calc(50% - 360px);
+        bottom: 0px;
+    }
+
+    #slide-6 .character img{
+        width:500px;
+        margin-bottom:100px;
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+    #helper{
+      height: 470vw;
+    }
+
+}
+
+@media only screen and (max-width: 1460px) {
+    #helper{
+      height: 490vw;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    #helper{
+      height:510vw
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+
+    #helper{
+      height:550vw
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+
+    #helper{
+      height:570vw
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #helper{
+      height:600vw
+    }
+
+    body.details{
+        width:100%;
+        overflow:auto;
+    }
+
+    #title {
+        margin-bottom: 0;
+
+    }
+
+    #title img{
+      width: 250px;
+    }
+
+    .details p{
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .col-3{
+      display:block !important;
+      width: 100%;
+    }
+
+    .details .border{
+      display:none;
+    }
+
+    #footer{
+      position:static;
+    }
+
+    #footer p{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+
+    #helper{
+      height:620vw
+    }
+
+}
+
+@media only screen and (max-width: 1120px) {
+
+    .next-page{
+        right:15%;
+    }
+
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+    .next-page{
+        right:17%;
+    }
+
+    #helper{
+      height:670vw
+    }
+
+    .story-page p{ font-size:22px }
+
+    .intro p { width: 300px }
+
+    .darra-bike, .duanne-bike{ display:none }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .form-wrap{ width:80% }
+
+    form > img{ width: 250px }
+
+    .rsvp-page p{
+        font-size: 15px;
+    }
+
+    .col{ margin:0px }
+
+    input{ font-size:25px }
+
+    label p { width:50% }
+
+    .border{ background-size:27% }
+
+    .menu-wrap ul li{
+      display:block;
+      width:50%;
+      min-width:250px;
+      margin:auto
+    }
+
+    .rsvp-page label{
+      width: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+.menu-wrap ul li a div{
+  height:222px;
+  width: 100% !important;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+
+.menu-wrap ul li a div{
+  height:200px;
+}
+
+}
+
+
+@media only screen and (max-width: 450px) {
+
+    form > img{ width: 200px }
+
+    input[type=submit]{
+      float:none;
+      text-align:center;
+      margin:20px auto 0
+    }
+
+    label .radio {
+        width: 40px;
+        height: 35px;
+    }
+
+    label .menu-btn p { padding: 12px 10px 0 }
+
+    .border{ background-size:30% }
+
+    .rsvp-page label{
+      width: 40px;
+    }
+
+    form label p{
+      margin:0 10px
+    }
+
+}
