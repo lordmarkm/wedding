@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://duanneanddarra.com/rsvp.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Duanne and Darra | RSVP</title>
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="http://duanneanddarra.com/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/png" href="http://duanneanddarra.com/img/favicon.png">
+    <link rel="stylesheet" href="./Duanne and Darra _ RSVP_files/style.css">
+    <link rel="stylesheet" href="./Duanne and Darra _ RSVP_files/responsive.css">
+    <link rel="stylesheet" href="./Duanne and Darra _ RSVP_files/champagne.css">
+</head>
+<body class="rsvp-page">
+    
+    <!-- Preloader -->
+    <div id="preloader" style="display: none;">
+      <div id="loading" style="display: none;"><img src="./Duanne and Darra _ RSVP_files/loading.gif" alt=""></div>
+      <div id="ink"></div>
+      <div id="load-bg" style="display: none;"></div>
+    </div>
+
+    <!-- FORM -->
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle">
+      <div class="menu-btn"><p>Menu</p></div>
+    </label>
+
+    <div class="menu-wrap" style="display: none;">
+      <div class="inner-wrap">
+      <ul>
+        <li><a href="http://duanneanddarra.com/details.html"><div id="details-btn"></div></a></li>
+        <li><a href="http://duanneanddarra.com/index.html"><div id="story-btn"></div></a></li>
+        <li><a href="http://duanneanddarra.com/rsvp.html"><div id="rsvp-btn"></div></a></li>
+      </ul>
+      </div>
+    </div>
+
+
+    <div class="border"></div>
+    <div class="form-wrap">
+      <form action="http://duanneanddarra.com/form.php" method="post">
+        <img src="./Duanne and Darra _ RSVP_files/rsvp-text.png" alt="RSVP">
+        <input type="text" class="hidden" name="hidden">
+        <div class="col">
+          <div class="col-wrap">
+            <p>Name</p>
+            <input type="text" name="name" required=""><div class="input-wrap" name="name"></div>
+          </div>
+        </div>
+
+        <div class="col col-2">
+          <div class="col-wrap">
+            <p>Email</p>
+            <input type="email" name="email" required=""><div class="input-wrap"></div>
+          </div>
+        </div>
+        <div class="col col-2">
+          <div class="col-wrap">
+            <p>Contact No.</p>
+            <input type="number" id="contact" name="contact" required=""><div class="input-wrap"></div>
+          </div>
+        </div>
+
+        <div class="clear"></div>
+
+
+        <div class="col col-2">
+          <div class="col-wrap">
+            <p>Attending?</p>
+            <input type="radio" name="attendance" id="yes" value="yes" required="">
+            <label for="yes">
+              <div class="radio"></div>
+              <p>Yes</p>
+            </label>
+            
+
+            <input type="radio" name="attendance" id="no" value="no">
+            <label for="no">
+              <div class="radio"></div>
+              <p>No</p>
+            </label>
+          </div>
+        </div>
+
+        <div class="col col-2">
+          <div class="col-wrap">
+            <p>No. of Guests</p>
+            <input type="number" name="attendees" required="">
+          </div>
+        </div>
+
+
+        <div class="clear"></div>
+
+        <div class="col" id="song">
+          <div class="col-wrap">
+            <p>Song Choice</p>
+            <input type="text" name="song" required=""><div class="input-wrap"></div>
+          </div>
+        </div>
+        <div class="col"><input type="submit" value="Submit"></div>
+      </form>
+    </div>
+
+
+    <script src="./Duanne and Darra _ RSVP_files/jquery-3.2.1.min.js.download"></script>
+    <script>
+
+
+    $(window).on('load', function() { // makes sure the whole site is loaded 
+      $('#loading').delay(300).hide();
+      $('#load-bg').delay(500).hide(); // will first fade out the loading animation 
+      $('#ink').delay(500).show();
+      $('#preloader').delay(1000).hide('slow'); // will fade out the white DIV that covers the website.
+    })
+
+      $('.menu-wrap').hide();
+      $('.menu-btn').click(function(){
+        if ($('#nav-toggle').is(':checked')) {
+          $('.menu-wrap').removeClass('menu-show');
+          $('.menu-wrap').delay(400).fadeOut(200);
+        } else {
+          $('.menu-wrap').fadeIn(200);
+          $('.menu-wrap').addClass('menu-show');
+
+        }
+      });
+    </script>
+
+
+</body></html>
