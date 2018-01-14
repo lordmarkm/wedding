@@ -145,7 +145,7 @@
         width: 100%;
     }
 
-    .col-3{
+    .col-3, .col-6{
       display:block !important;
       width: 100%;
     }
