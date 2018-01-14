@@ -6,9 +6,9 @@
     <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"> 
     <link rel="shortcut icon" href="http://duanneanddarra.com/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" type="image/png" href="http://duanneanddarra.com/img/favicon.png">
-    <link rel="stylesheet" href="./Duanne and Darra _ RSVP_files/style.css">
-    <link rel="stylesheet" href="./Duanne and Darra _ RSVP_files/responsive.css">
-    <link rel="stylesheet" href="./Duanne and Darra _ RSVP_files/champagne.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/champagne.css">
 </head>
 <body class="rsvp-page">
     
@@ -38,8 +38,8 @@
 
     <div class="border"></div>
     <div class="form-wrap">
-      <form action="http://duanneanddarra.com/form.php" method="post">
-        <img src="./Duanne and Darra _ RSVP_files/rsvp-text.png" alt="RSVP">
+      <form id="rsvp-form">
+        <img src="./assets/img/rsvp-text.png" alt="RSVP">
         <input type="text" class="hidden" name="hidden">
         <div class="col">
           <div class="col-wrap">
@@ -103,28 +103,41 @@
     </div>
 
 
-    <script src="./Duanne and Darra _ RSVP_files/jquery-3.2.1.min.js.download"></script>
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/jquery.serialize-object.min.js"></script>
     <script>
+      (function($) {
+        $('#loading').delay(300).hide();
+        $('#load-bg').delay(500).hide(); // will first fade out the loading animation 
+        $('#ink').delay(500).show();
+        $('#preloader').delay(1000).hide('slow'); // will fade out the white DIV that covers the website.
 
+        var $form = $('form#rsvp-form'), url = 'https://script.google.com/macros/s/AKfycbxY1rZG5aEXNfCOohyzqlPV-JLkPpVzrVgnDCSSqwTprlJ45go/exec'
+        $form.on('submit', function(e) {
+          e.preventDefault();
+          var jqxhr = $.ajax({
+            url : url,
+            method : "POST",
+            dataType : "json",
+            data : $form.serializeObject(),
+            success: function (response) {
+              alert(JSON.stringify(response));
+            }
+          });
+        });
 
-    $(window).on('load', function() { // makes sure the whole site is loaded 
-      $('#loading').delay(300).hide();
-      $('#load-bg').delay(500).hide(); // will first fade out the loading animation 
-      $('#ink').delay(500).show();
-      $('#preloader').delay(1000).hide('slow'); // will fade out the white DIV that covers the website.
-    })
+        $('.menu-wrap').hide();
+        $('.menu-btn').click(function() {
+          if ($('#nav-toggle').is(':checked')) {
+            $('.menu-wrap').removeClass('menu-show');
+            $('.menu-wrap').delay(400).fadeOut(200);
+          } else {
+            $('.menu-wrap').fadeIn(200);
+            $('.menu-wrap').addClass('menu-show');
 
-      $('.menu-wrap').hide();
-      $('.menu-btn').click(function(){
-        if ($('#nav-toggle').is(':checked')) {
-          $('.menu-wrap').removeClass('menu-show');
-          $('.menu-wrap').delay(400).fadeOut(200);
-        } else {
-          $('.menu-wrap').fadeIn(200);
-          $('.menu-wrap').addClass('menu-show');
-
-        }
-      });
+          }
+        });
+      })(jQuery);
     </script>
 
 
