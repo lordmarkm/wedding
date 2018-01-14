@@ -7,16 +7,11 @@
 
 html, body {
     width:100%;
-    height:100%;
     position: absolute;
 }
 
 body{
     background:url('../img/paper-bg.png');
-}
-
-body.story-page{
-  height: 2000px;
 }
 
 .story-page p{
@@ -600,7 +595,7 @@ body.rsvp-page{
 }
 
 .border{
-  background:url('../img/top-left.png'),url('../img/top-right.png'),url('../img/bottom-right.png'),url('../img/bottom-left.png');
+  background:url('../img/top-left.png'),url('../img/shell.gif'),url('../img/fish.jpg'),url('../img/bottom-left.png');
   background-position:top left, top right, bottom right, bottom left;
   background-repeat:no-repeat;
   background-size:20%;
@@ -608,7 +603,7 @@ body.rsvp-page{
   bottom: 0;
   left:0;
   width:100%;
-  height: 100vh;
+  height: 100%;
   z-index:-1;
 }
 
