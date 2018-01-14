@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Mark and Carissa | Details</title>
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/champagne.css">
+</head>
+<body class="details">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="loading"><img src="./assets/img/loading.gif" alt=""></div>
+      <div id="ink"></div>
+      <div id="load-bg"></div>
+    </div>
+
+    <!-- Menu -->
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle">
+      <div class="menu-btn"><p>Menu</p></div>
+    </label>
+
+    <div class="menu-wrap" style="display: none;">
+      <div class="inner-wrap">
+      <ul>
+        <li><a href="./details.html"><div id="details-btn"></div></a></li>
+        <li><a href="./index.html"><div id="story-btn"></div></a></li>
+        <li><a href="./rsvp.html"><div id="rsvp-btn"></div></a></li>
+      </ul>
+      </div>
+    </div>
+
+	<!-- BODY -->
+
+	<div class="border"></div>
+	
+	<div id="title"><img src="./assets/img/details-text.png" alt="Details"></div>
+
+	<div class="main-wrap">
+		<div class="col col-3">
+		<div class="col-wrap">
+				<div class="row">
+				<h1>Date</h1>
+				<p>Tuesday</p>
+				<p>21st of November 2017</p>
+				</div>
+
+				<div class="row">
+					<h1>Ceremony</h1>
+					<p>Saint Benedict Church</p>
+					<h6>2:00 in the afternoon</h6>
+					<h6>Ayala Westgrove Heights, Brgy. Inichan, Silang, Cavite</h6>
+				</div>
+
+				<div class="row">
+					<h1>Reception</h1>
+					<p>Alta Verande de Tibig</p>
+					<h6>4:30 in the afternoon</h6>
+					<h6>Alcalde St. Brgy. Tibig, Silang, Cavite</h6>
+				</div>
+			</div>
+		</div>
+		<div class="col col-3"><img src="./assets/img/map.gif" alt=""></div>
+		<div class="col col-3">
+			<div class="row">
+				<h1>Dress Code</h1>
+				<p>Semi-formal</p>
+				<h6>Ladies : White Dress</h6>
+				<h6>Gentlemen : White Polo &amp; Khaki pants</h6>
+			</div>
+			<img src="./assets/img/attire.png" alt="">
+		</div>
+	</div>
+
+	<div id="footer">
+		<p><a href="http://duanneanddarra.com/index.html">Read our story</a> <span>or</span> <a href="http://duanneanddarra.com/rsvp.html">Answer our RSVP</a></p>
+	</div>
+
+
+  <script src="./assets/js/jquery-3.2.1.min.js"></script>
+  <script>
+  (function ($) {
+    $(window).on('load', function() { // makes sure the whole site is loaded 
+      $('#loading').delay(300).hide();
+      $('#load-bg').delay(500).hide(); // will first fade out the loading animation 
+      $('#ink').delay(500).show();
+      $('#preloader').delay(1000).hide('slow'); // will fade out the white DIV that covers the website.
+    });
+    $('.menu-wrap').hide();
+
+    $('.menu-btn').click(function() {
+      if ($('#nav-toggle').is(':checked')) {
+        $('.menu-wrap').removeClass('menu-show');
+        $('.menu-wrap').delay(400).fadeOut(200);
+      } else {
+        $('.menu-wrap').fadeIn(200);
+        $('.menu-wrap').addClass('menu-show');
+      }
+    });
+  })(jQuery);
+  </script>
+
+
+</body></html>

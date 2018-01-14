@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <!-- saved from url=(0035)http://duanneanddarra.com/rsvp.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <title>Duanne and Darra | RSVP</title>
-    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"> 
-    <link rel="shortcut icon" href="http://duanneanddarra.com/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" type="image/png" href="http://duanneanddarra.com/img/favicon.png">
+    <title>Mark and Carissa | RSVP</title>
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.png">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/champagne.css">
 </head>
 <body class="rsvp-page">
-    
     <!-- Preloader -->
-    <div id="preloader" style="display: none;">
-      <div id="loading" style="display: none;"><img src="./Duanne and Darra _ RSVP_files/loading.gif" alt=""></div>
+    <div id="preloader">
+      <div id="loading"><img src="./assets/img/loading.gif" alt=""></div>
       <div id="ink"></div>
-      <div id="load-bg" style="display: none;"></div>
+      <div id="load-bg"></div>
     </div>
 
-    <!-- FORM -->
+    <!-- Menu -->
     <input type="checkbox" id="nav-toggle">
     <label for="nav-toggle">
       <div class="menu-btn"><p>Menu</p></div>
@@ -28,9 +26,9 @@
     <div class="menu-wrap" style="display: none;">
       <div class="inner-wrap">
       <ul>
-        <li><a href="http://duanneanddarra.com/details.html"><div id="details-btn"></div></a></li>
-        <li><a href="http://duanneanddarra.com/index.html"><div id="story-btn"></div></a></li>
-        <li><a href="http://duanneanddarra.com/rsvp.html"><div id="rsvp-btn"></div></a></li>
+        <li><a href="./details.html"><div id="details-btn"></div></a></li>
+        <li><a href="./index.html"><div id="story-btn"></div></a></li>
+        <li><a href="./rsvp.html"><div id="rsvp-btn"></div></a></li>
       </ul>
       </div>
     </div>
@@ -92,12 +90,6 @@
 
         <div class="clear"></div>
 
-        <div class="col" id="song">
-          <div class="col-wrap">
-            <p>Song Choice</p>
-            <input type="text" name="song" required=""><div class="input-wrap"></div>
-          </div>
-        </div>
         <div class="col"><input type="submit" value="Submit"></div>
       </form>
     </div>
@@ -107,10 +99,12 @@
     <script src="./assets/js/jquery.serialize-object.min.js"></script>
     <script>
       (function($) {
-        $('#loading').delay(300).hide();
-        $('#load-bg').delay(500).hide(); // will first fade out the loading animation 
-        $('#ink').delay(500).show();
-        $('#preloader').delay(1000).hide('slow'); // will fade out the white DIV that covers the website.
+        $(window).on('load', function() { // makes sure the whole site is loaded 
+          $('#loading').delay(300).hide();
+          $('#load-bg').delay(500).hide(); // will first fade out the loading animation 
+          $('#ink').delay(500).show();
+          $('#preloader').delay(1000).hide('slow'); // will fade out the white DIV that covers the website.
+        });
 
         var $form = $('form#rsvp-form'), url = 'https://script.google.com/macros/s/AKfycbxY1rZG5aEXNfCOohyzqlPV-JLkPpVzrVgnDCSSqwTprlJ45go/exec'
         $form.on('submit', function(e) {
