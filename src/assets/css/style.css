@@ -6,7 +6,7 @@
 }
 
 html, body {
-    width:100%;
+    overflow-x: hidden;
 }
 
 body main {
@@ -44,10 +44,10 @@ img.logo {
 }
 
 
-main.details {
+main.details, main.rsvp {
     height: 100vh;
 }
-.border-details {
+.border-details, .border-rsvp {
     background:url('../img/top-left.png'),url('../img/top-right.png'),url('../img/bottom-right.png'),url('../img/bottom-left.png');
     background-position:top left, top right, bottom right, bottom left;
     background-repeat:no-repeat;
@@ -61,10 +61,10 @@ main.details {
     pointer-events: none;
 }
 @media only screen and (max-width: 1200px) {
-    main.details {
+    main.details, main.rsvp {
         height: 1000px;
     }
-    .border-details {
+    .border-details, .border-rsvp {
         height: 1000px !important;
     }
 }
@@ -638,16 +638,6 @@ label .menu-btn p{
 }
 
 
-
-/* === RSVP ===*/
-
-body.rsvp-page{
- width: 100vw;
- height:100vh;
- overflow:hidden;
- position:fixed;
- bottom:0
-}
 
 .border{
   background:url('../img/top-left.png'),url('../img/shell.gif'),url('../img/fish.jpg'),url('../img/bottom-left.png');
