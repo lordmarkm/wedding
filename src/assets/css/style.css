@@ -7,14 +7,43 @@
 
 html, body {
     width:100%;
-    position: absolute;
 }
 
-body{
+body main {
     background:url('../img/paper-bg.png');
 }
 
-.story-page p{
+main.story-page {
+    height: 2500px;
+}
+@media only screen {
+    main.story-page {
+        height: 3000px;
+    }
+    .border-2 {
+        height: 3000px !important;
+    }
+}
+
+img.logo {
+    width: 100%;
+}
+
+.border-2 {
+    background:url('../img/top-left.png'),url('../img/top-right.png'),url('../img/bottom-right.png'),url('../img/bottom-left.png');
+    background-position:top left, top right, bottom right, bottom left;
+    background-repeat:no-repeat;
+    background-size:20%;
+    position:absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 2500px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.story-page p {
     text-align:center;
     font-size:1.8em;
     width: 100%;
@@ -600,7 +629,7 @@ body.rsvp-page{
   background-repeat:no-repeat;
   background-size:20%;
   position:absolute;
-  bottom: 0;
+  top: 0;
   left:0;
   width:100%;
   height: 100%;
@@ -709,7 +738,7 @@ input[type=radio]:checked + label .radio{
   background-size:100%;
 } 
 
-input[type=submit]{
+input[type=submit] {
   background:url('../img/button.png') no-repeat;
   background-size:100%;
   border:0;
@@ -718,6 +747,22 @@ input[type=submit]{
   color:white;
   text-transform:uppercase;
   float:right;
+  margin-top:20px;
+  margin-right: 30px;
+  width:auto;
+  cursor:pointer;
+}
+
+a.button, a.button:hover {
+  text-decoration: none !important;
+  color: white;
+  background:url('../img/button.png') no-repeat;
+  background-size: 100% 99%;
+  border:0;
+  font-size:22px;
+  padding:15px 60px;
+  color:white;
+  text-transform:uppercase;
   margin-top:20px;
   margin-right: 30px;
   width:auto;
@@ -829,7 +874,6 @@ h1{
 }
 
 div.polaroid {
-    width: 80%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -839,4 +883,8 @@ img {width: 100%}
 div.polaroid div.caption {
     text-align: center;
     padding: 10px 20px;
+}
+
+img.cardimg {
+	width: 100%;
 }

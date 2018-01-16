@@ -9,39 +9,37 @@
     <link rel="stylesheet" href="./assets/css/champagne.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body class="story-page">
-    <!-- Preloader -->
-    <div id="preloader">
-      <div id="loading"><img src="./assets/img/loading.gif" alt=""></div>
-      <div id="ink"></div>
-      <div id="load-bg"></div>
+<body>
+<!-- Border -->
+<main class="story-page">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="loading"><img src="./assets/img/loading.gif" alt=""></div>
+    <div id="ink"></div>
+    <div id="load-bg"></div>
+  </div>
+
+  <!-- Menu -->
+  <input type="checkbox" id="nav-toggle">
+  <label for="nav-toggle">
+    <div class="menu-btn"><p>Menu</p></div>
+  </label>
+
+  <div class="menu-wrap" style="display: none;">
+    <div class="inner-wrap">
+    <ul>
+      <li><a href="./details.html"><div id="details-btn"></div></a></li>
+      <li><a href="./index.html"><div id="story-btn"></div></a></li>
+      <li><a href="./rsvp.html"><div id="rsvp-btn"></div></a></li>
+    </ul>
     </div>
+  </div>
 
-    <!-- Menu -->
-    <input type="checkbox" id="nav-toggle">
-    <label for="nav-toggle">
-      <div class="menu-btn"><p>Menu</p></div>
-    </label>
+  <div id="title"><img class="logo" src="./assets/img/logo.png" alt="Details"></div>
 
-    <div class="menu-wrap" style="display: none;">
-      <div class="inner-wrap">
-      <ul>
-        <li><a href="./details.html"><div id="details-btn"></div></a></li>
-        <li><a href="./index.html"><div id="story-btn"></div></a></li>
-        <li><a href="./rsvp.html"><div id="rsvp-btn"></div></a></li>
-      </ul>
-      </div>
-    </div>
-
-	<!-- BODY -->
-
-	<div class="border"></div>
-	
-	<div id="title"><img src="./assets/img/logo.png" alt="Details"></div>
-
-  <div class="main-wrap">
+  <div class="container">
     <div class="row">
-      <div class="col col-3">
+      <div class="col-sm-12 col-md-4 col-lg-4">
         <div class="col-wrap">
           <div class="row">
             <h1>How we met</h1>
@@ -49,13 +47,14 @@
           </div>
         </div>
       </div>
-      <div class="col col-6">
+      <div class="col-sm-12 col-md-8 col-lg-8">
         <div class="polaroid">
           <img class="cardimg" src="https://imgur.com/9eOtIya.png" alt="Ocean Park">
           <div class="caption">
             <p>Diane and William
-  April 21, 2018 • Clifton, NJ
-  97 days to go!</p>
+               April 21, 2018 • Clifton, NJ
+               97 days to go!
+            </p>
           </div>
         </div>
       </div>
@@ -64,24 +63,24 @@
     <div class="clearfix"></div>
 
     <div class="row">
-    <div class="col col-6">
-      <div class="polaroid" style="margin-left: auto; margin-right: 0;">
-        <img class="cardimg" src="https://imgur.com/05t0xBz.png" alt="Marty's Wedding">
-        <div class="caption">
-          <p>Diane and William
-April 21, 2018 • Clifton, NJ
-97 days to go!</p>
+      <div class="col-sm-12 col-md-4 col-lg-4 col-md-push-8 col-lg-push-8">
+        <div class="col-wrap">
+          <div class="row">
+            <h1>Our proposal</h1>
+            <p>Will planned a picnic in the park just after sunset to watch the July 4th fireworks display. He popped the question as fireworks burst overhead, and of course, Diane said yes! They celebrated with their families the next day with dinner and a champagne toast.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col col-3">
-      <div class="col-wrap">
-        <div class="row">
-          <h1>Our proposal</h1>
-          <p>Will planned a picnic in the park just after sunset to watch the July 4th fireworks display. He popped the question as fireworks burst overhead, and of course, Diane said yes! They celebrated with their families the next day with dinner and a champagne toast.</p>
+      <div class="col-sm-12 col-md-8 col-lg-8 col-md-pull-4 col-lg-pull-4">
+        <div class="polaroid" style="margin-left: auto; margin-right: 0;">
+          <img class="cardimg" src="https://imgur.com/05t0xBz.png" alt="Marty's Wedding">
+          <div class="caption">
+            <p>Diane and William
+  April 21, 2018 • Clifton, NJ
+  97 days to go!</p>
+          </div>
         </div>
       </div>
-    </div>
     </div>
 
     <div class="clearfix"></div>
@@ -105,8 +104,61 @@ April 21, 2018 • Clifton, NJ
       </div>
     </div>
 
-
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <a href="./details.html" class="button">View Details</a>
+        <a href="./rsvp.html" class="button">Answer our RSVP</a>
+      </div>
+    </div>
   </div>
+
+  <div class="border-2"></div>
+</main>
+
+<footer>
+<div class="container text-center">
+    <hr />
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Product for Mac</a></li>
+          <li><a href="#">Product for Windows</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Web analytics</a></li>
+          <li><a href="#">Presentations</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Product Help</a></li>
+          <li><a href="#">Developer API</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+  <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-pills nav-justified">
+                <li><a href="/">© 2013 Company Name.</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</footer>
 
   <script src="./assets/js/jquery-3.2.1.min.js"></script>
   <script>
