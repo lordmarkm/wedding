@@ -26,7 +26,7 @@ main.story-page {
 }
 
 img.logo {
-    width: 100%;
+    width: 100% !important;
 }
 
 .border-2 {
@@ -887,4 +887,8 @@ div.polaroid div.caption {
 
 img.cardimg {
 	width: 100%;
+}
+
+footer {
+	 background: lightgray;
 }
