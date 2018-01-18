@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/champagne.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 </head>
 <body class="details">
 <main class="rsvp">
@@ -42,7 +43,7 @@
         <div class="form-group row">
           <label for="name" class="col-12">Name</label>
           <div class="col-12">
-            <input type="text" name="name" required="required"><div class="input-wrap" name="name"></div>
+            <input type="text" name="name" required="required" value="Mark"><div class="input-wrap" name="name"></div>
           </div>
         </div>
       </div>
@@ -52,7 +53,7 @@
         <div class="form-group row">
           <label for="email" class="col-12">Email</label>
           <div class="col-12">
-            <input type="email" name="email" required=""><div class="input-wrap"></div>
+            <input type="email" name="email" required="" value="a@b.com"><div class="input-wrap"></div>
           </div>
         </div>
       </div>
@@ -60,7 +61,7 @@
         <div class="form-group row">
           <label for="email" class="col-12">Contact No.</label>
           <div class="col-12">
-            <input type="number" id="contact" name="contact" required=""><div class="input-wrap"></div>
+            <input type="number" id="contact" name="contact" required="" value="1"><div class="input-wrap"></div>
           </div>
         </div>
       </div>
@@ -70,12 +71,11 @@
         <div class="form-group row">
           <label for="email" class="col-12">Attending?</label>
           <div class="col-12">
-                      <input type="radio" name="attendance" id="yes" value="yes" required="">
-          <label for="yes" style="text-align: center;">
-            <div class="radio"></div><br>
-            Yes
-          </label>
-          
+            <input type="radio" name="attendance" id="yes" value="yes" required="" checked="checked">
+            <label for="yes" style="text-align: center;">
+              <div class="radio"></div><br>
+              Yes
+            </label>
 
           <input type="radio" name="attendance" id="no" value="no">
           <label for="no" style="text-align: center;">
@@ -89,7 +89,7 @@
         <div class="form-group row">
           <label for="email" class="col-12">No. of Guests</label>
           <div class="col-12">
-	        <input type="number" name="attendees" required="">
+	        <input type="number" name="attendees" required="" value="1">
           </div>
         </div>
       </div>
@@ -132,15 +132,40 @@
       <div class="row">
           <div class="col-lg-12">
               <ul class="nav nav-pills nav-justified">
-                  <li><a href="/">Interested in getting your an RSVP page for your own event? Click here</a></li>
+                  <li><a href="./custom.html">Interested in getting an RSVP page for your own event? Click here</a></li>
               </ul>
           </div>
       </div>
   </div>
   </footer>
 
+<style>
+.swal2-loading .swal2-confirm {
+  background: none;
+}
+.swal2-confirm {
+  background-color: transparent !important;
+  outline: none !important;
+  background: url('assets/img/button.png') no-repeat;
+  background-size:100% 100%;
+  border:0;
+  font-size:22px;
+  padding:15px 60px;
+  color:white;
+  margin-top:-40px;
+  width:auto;
+  cursor:pointer;
+  overflow: hidden;
+}
+.swal2-confirm:active, .swal2-confirm:focus {
+  outline: none !important;
+  overflow: hidden;
+}
+</style>
+
     <script src="./assets/js/jquery-3.2.1.min.js"></script>
     <script src="./assets/js/jquery.serialize-object.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.4.0/dist/sweetalert2.all.min.js"></script>
     <script>
       (function($) {
         $(window).on('load', function() { // makes sure the whole site is loaded 
@@ -153,15 +178,34 @@
         var $form = $('form#rsvp-form'), url = 'https://script.google.com/macros/s/AKfycbxY1rZG5aEXNfCOohyzqlPV-JLkPpVzrVgnDCSSqwTprlJ45go/exec'
         $form.on('submit', function(e) {
           e.preventDefault();
+
+          let data = $form.serializeObject();
+          swal({
+            text: "Submitting your response! Thank you!",
+            button: "Back to Details",
+            allowOutsideClick: false,
+            imageUrl: 'assets/img/logo.png'
+          });
+          swal.showLoading();
           var jqxhr = $.ajax({
             url : url,
             method : "POST",
             dataType : "json",
             data : $form.serializeObject(),
             success: function (response) {
-              alert(JSON.stringify(response));
+              swal({
+                text: "Response sent!",
+                allowOutsideClick: false,
+                confirmButtonText: "View Details",
+                focusConfirm: false,
+                focusCancel: false,
+                imageUrl: 'assets/img/logo.png'
+              }).then(function () {
+                window.location.href="./details.html";
+              });
             }
           });
+          //swal.showLoading();
         });
 
         $('.menu-wrap').hide();

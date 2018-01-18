@@ -190,16 +190,24 @@
       height:670vw
     }
 
-    .story-page p{ font-size:22px }
+    .story-page p{ font-size:32px }
 
     .intro p { width: 300px }
 
     .darra-bike, .duanne-bike{ display:none }
 
+    h1.details {
+      font-size:32px
+    }
+    .details p, .details h6 {
+      font-size:36px
+    }
 }
 
 @media only screen and (max-width: 1000px) {
-
+    body {
+      font-size: 3vw !important;
+    }
     .form-wrap{ width:80% }
 
     form > img{ width: 250px }

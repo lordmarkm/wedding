@@ -18,10 +18,10 @@ main.story-page {
 }
 @media only screen and (max-width: 1200px) {
     main.story-page {
-        height: 3000px;
+        height: 3500px;
     }
     .border-2 {
-        height: 3000px !important;
+        height: 3500px !important;
     }
 }
 
@@ -61,14 +61,14 @@ main.details, main.rsvp {
 }
 @media only screen and (max-width: 1200px) {
     main.details {
-        height: 2090px;
+        height: 2390px;
     }
     main.rsvp {
         min-height: 100vh;
         height: 1000px;
     }
     .border-details {
-        min-height: 2090px !important;
+        min-height: 2390px !important;
     }
     .border-rsvp {
         min-height: 100vh !important;
