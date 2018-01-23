@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <div id="title"><img class="logo" src="./assets/img/logo.gif" alt="Details"></div>
+  <div id="title"><img id="logo" class="logo" src="" alt="Details"></div>
 
   <div class="container">
     <div class="row">
@@ -157,6 +157,7 @@
       $('#load-bg').delay(500).hide(); // will first fade out the loading animation 
       $('#ink').delay(500).show();
       $('#preloader').delay(1000).hide('slow'); // will fade out the white DIV that covers the website.
+      $('#logo').delay(3500).attr('src', './assets/img/logo.gif');
     });
     $('.menu-wrap').hide();
 
