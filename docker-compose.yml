@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  nginx:
+    image: nginx:1.10.3
+    ports:
+    - "80:80"
+    volumes:
+    - "./nginx.conf:/etc/nginx/conf.d/wedding.conf"
+    - "./src:/www/wedding"
+    command: [nginx, '-g', 'daemon off;']
